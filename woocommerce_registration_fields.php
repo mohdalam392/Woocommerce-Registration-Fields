@@ -77,7 +77,7 @@ function registration_errors_validation( $reg_errors ) {
 	else if ( empty( $_POST['phone'] )) {
 		$reg_errors->add( 'empty required fields', __( 'Please Enter Phone No.', 'woocommerce' ) );
 	}
-	else if(count($_POST['phone'])!=10 ){
+	else if(strlen($_POST['phone'])!=10 ){
 		$reg_errors->add( 'empty required fields', __( 'Phone Length Should Be 10.', 'woocommerce' ) );	
 	}
 
